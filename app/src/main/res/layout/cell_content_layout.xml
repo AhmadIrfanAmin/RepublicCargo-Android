@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:baselineAligned="false"
+    android:visibility="gone"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/background_borderr"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/tv_sender2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                android:text="Sender"
+                />
+            <TextView
+                android:id="@+id/tv_receiverr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                android:text="Receiver"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+
+
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/tv_sender_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.5"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:text="Ahmad Irfan"
+                    />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/tv_sender_phone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_below="@id/tv_sender_name2"
+                    android:text="03124477168"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+
+
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/tv_receiver_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.5"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:text="Ramzan Ali"
+                    />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/tv_receiver_phone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_below="@id/tv_sender_name2"
+                    android:text="03144479168"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            >
+            <TextView
+                android:id="@+id/tv_origin_address2"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Lahore"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_ocean_air2"
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/flight"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_destination_address2"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Karachi"
+                android:textColor="@android:color/black"
+
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="1.3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        >
+        <Button
+            android:background="@drawable/button_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOOK"
+            android:textColor="#FFF"
+            android:id="@+id/btn_book"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

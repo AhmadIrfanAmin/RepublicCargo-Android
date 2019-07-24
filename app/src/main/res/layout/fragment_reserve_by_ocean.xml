@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".customer.fragments.ReserveByOceanFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/datePicker"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".6"
+            app:datePicker="true"
+            app:headerColor="@color/colorAccent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:selectionColor="@color/colorAccent"
+            app:todayLabelColor="@color/colorPrimaryDark" />
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@id/datePicker"
+            app:layout_constraintBottom_toTopOf="@id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".2"
+            android:gravity="center"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 - 12 am"
+                android:background="@drawable/button_background"
+                android:textColor="#FFF"
+                android:layout_marginLeft="5dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 - 6 pm"
+                android:background="@drawable/button_background"
+                android:textColor="#FFF"
+                android:layout_marginLeft="5dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 - 9 pm"
+                android:background="@drawable/button_background"
+                android:textColor="#FFF"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".1"
+            android:text="NEXT"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
