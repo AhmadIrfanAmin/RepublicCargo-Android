@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".agent.fragments.PickupLocationsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_label_sort_type"
+                android:textAlignment="center"
+                android:text="SORT BY :"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                />
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_sort_types"
+                android:layout_alignParentRight="true"
+                android:entries="@array/locations_sort_by"
+                >
+            </Spinner>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_locations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_top"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Find Best Route"
+            android:textColor="#FFF"
+            android:background="@drawable/button_background"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

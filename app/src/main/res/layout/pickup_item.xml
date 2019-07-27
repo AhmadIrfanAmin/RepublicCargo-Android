@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="120dp"
+       android:orientation="horizontal"
+       >
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="2.5"
+           android:gravity="center"
+           android:orientation="horizontal"
+           >
+           <CheckBox
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+           <ImageView
+               android:id="@+id/iv_customer_pic"
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:src="@drawable/ic_menu_camera"
+               />
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="4"
+           android:orientation="vertical"
+           >
+           <TextView
+               android:id="@+id/tv_name"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1.5"
+               android:text="Ahmad Irfan"
+               android:textStyle="bold"
+               android:textSize="22sp"
+               android:gravity="bottom|center_horizontal"
+               android:textColor="@color/black_alpha_75"
+               />
+           <TextView
+               android:id="@+id/tv_address"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="3"
+               android:layout_gravity="start"
+               android:textAlignment="viewStart"
+               android:text="House # 415 Mehboob Market Rehmapura Lahore Pakistan"
+               />
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="3"
+           android:orientation="vertical"
+           android:gravity="center"
+           >
+           <TextView
+               android:id="@+id/tv_status"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Open"
+               android:textColor="@color/colorPrimary"
+               android:drawableLeft="@drawable/ic_menu_camera"
+               />
+           <TextView
+               android:id="@+id/tv_distance_from_origin"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="20 Kms Away"
+               android:textStyle="bold"
+               />
+       </LinearLayout>
+   </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#e3e3e3"
+        />
+</LinearLayout>

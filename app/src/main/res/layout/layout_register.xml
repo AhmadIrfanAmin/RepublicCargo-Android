@@ -25,23 +25,10 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     android:layout_marginTop="@dimen/loginViewsMargin">
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/et_name"
         style="@style/modifiedEditText"
         android:hint="@string/login_name_hint"
         android:inputType="textPersonName"
-        android:maxLines="1" />
-</com.google.android.material.textfield.TextInputLayout>
-
-<com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/textInputMobile"
-    style="@style/parent"
-    android:layout_marginTop="@dimen/loginViewsMargin">
-
-    <EditText
-        android:id="@+id/editTextMobile"
-        style="@style/modifiedEditText"
-        android:hint="@string/login_mobile_number_hint"
-        android:inputType="phone"
         android:maxLines="1" />
 </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,28 +38,46 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     android:layout_marginTop="@dimen/loginViewsMargin">
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/et_email"
         style="@style/modifiedEditText"
         android:hint="@string/login_email_hint"
         android:inputType="textEmailAddress"
         android:maxLines="1" />
 </com.google.android.material.textfield.TextInputLayout>
-
 <com.google.android.material.textfield.TextInputLayout
     android:id="@+id/textInputPassword"
     style="@style/parent"
     android:layout_marginTop="@dimen/loginViewsMargin">
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/et_password"
         style="@style/modifiedEditText"
         android:hint="@string/login_password_hint"
         android:inputType="textPassword"
         android:maxLines="1" />
 </com.google.android.material.textfield.TextInputLayout>
+    <!--<com.google.android.material.textfield.TextInputLayout-->
+        <!--android:id="@+id/textInputMobile"-->
+        <!--style="@style/parent"-->
+        <!--android:layout_marginTop="@dimen/loginViewsMargin">-->
 
-<Button
-    android:id="@+id/cirLoginButton"
+        <!--<EditText-->
+            <!--android:id="@+id/et_phone"-->
+            <!--style="@style/modifiedEditText"-->
+            <!--android:hint="@string/login_mobile_number_hint"-->
+            <!--android:inputType="phone"-->
+            <!--android:maxLines="1" />-->
+    <!--</com.google.android.material.textfield.TextInputLayout>-->
+    <Spinner
+        android:id="@+id/sp_user_types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        android:entries="@array/user_types"
+        >
+    </Spinner>
+    <Button
+    android:id="@+id/et_signup"
     style="@style/loginButton"
     android:text="Signup"
     android:onClick="signup_Click"

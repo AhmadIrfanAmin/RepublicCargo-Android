@@ -1,39 +1,42 @@
-package com.logixcess.republiccargo.customer.activities;
+package com.logixcess.republiccargo.agent.activities;
 
 import android.net.Uri;
 import android.os.Bundle;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import androidx.fragment.app.Fragment;
+
 import android.view.View;
+
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+
 import android.view.MenuItem;
+
 import com.google.android.material.navigation.NavigationView;
+import com.logixcess.republiccargo.R;
+import com.logixcess.republiccargo.agent.fragments.AccountSettingsFragment;
+import com.logixcess.republiccargo.agent.fragments.NotificationsFragment;
+import com.logixcess.republiccargo.agent.fragments.OpenMapFragment;
+import com.logixcess.republiccargo.agent.fragments.PickupLocationsFragment;
+
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
 import android.view.Menu;
 
-import com.logixcess.republiccargo.R;
-import com.logixcess.republiccargo.customer.fragments.AgentLocationFragment;
-import com.logixcess.republiccargo.customer.fragments.NotificationsFragment;
-import com.logixcess.republiccargo.customer.fragments.OrdersFragment;
-import com.logixcess.republiccargo.customer.fragments.RequestsFragment;
-import com.logixcess.republiccargo.customer.fragments.ReservationFragment;
-import com.logixcess.republiccargo.customer.fragments.ReserveByAirFragment;
-import com.logixcess.republiccargo.customer.fragments.ReserveByOceanFragment;
-import com.logixcess.republiccargo.customer.fragments.TrackingFragment;
-
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, NotificationsFragment.OnFragmentInteractionListener, OrdersFragment.OnFragmentInteractionListener, ReservationFragment.OnFragmentInteractionListener, ReserveByOceanFragment.OnFragmentInteractionListener, ReserveByAirFragment.OnFragmentInteractionListener, TrackingFragment.OnFragmentInteractionListener
+public class AgentMainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener,PickupLocationsFragment.OnFragmentInteractionListener
+        ,AccountSettingsFragment.OnFragmentInteractionListener,NotificationsFragment.OnFragmentInteractionListener,OpenMapFragment.OnFragmentInteractionListener
 {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_agent_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        loadFragment(new ReservationFragment());
+        loadFragment(new PickupLocationsFragment());
     }
 
     @Override
@@ -67,20 +70,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.agent_main, menu);
         return true;
     }
-    private boolean loadFragment(Fragment fragment) {
-        //switching fragment
-        if (fragment != null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.frame_container, fragment)
-                    .commit();
-            return true;
-        }
-        return false;
-    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -103,35 +96,36 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         Fragment fragment = null;
         if (id == R.id.nav_home) {
-            // Handle the booking section
-            fragment = new ReservationFragment();
-        }
-        else if (id == R.id.nav_booking)
-        {
-            fragment =  new OrdersFragment();
-        }
-        else if (id == R.id.nav_tracking)
-        {
-            fragment = new TrackingFragment();
-        }
-        else if (id == R.id.nav_notifications)
-        {
+            fragment =  new PickupLocationsFragment();
+        } else if (id == R.id.nav_notifications) {
             fragment =  new NotificationsFragment();
+
+        } else if (id == R.id.nav_account_setting) {
+
+            fragment =  new AccountSettingsFragment();
+        } else if (id == R.id.nav_open_map) {
+
+            fragment =  new OpenMapFragment();
         }
-        else if (id == R.id.nav_logout)
-        {
-            //fragment = new AgentLocationFragment();
+        else if (id == R.id.nav_logout) {
+
         }
-        else if (id == R.id.nav_share)
-        {
-        }
-//        else if (id == R.id.nav_send)
-//        {
-//        }
         loadFragment(fragment);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private boolean loadFragment(Fragment fragment) {
+        //switching fragment
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.frame_container2, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
     }
 
     @Override

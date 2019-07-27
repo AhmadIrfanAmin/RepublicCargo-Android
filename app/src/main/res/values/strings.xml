@@ -1,4 +1,11 @@
 <resources>
+    <string-array name="user_types">
+        <item>Customer</item>
+        <item>Pickup Agent</item>
+    </string-array>
+    <string-array name="locations_sort_by">
+        <item>Distance</item>
+    </string-array>
     <string name="app_name">Republic Cargo</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -31,5 +38,14 @@
     <string name="menu_bookings">Bookings</string>
     <string name="menu_tracking">Tracking</string>
     <string name="menu_logout">Logout</string>
+    <string name="label_no_track">No riders to track yet</string>
+    <string name="title_activity_maps">Tracking</string>
+    <string name="title_activity_agent_main">AgentMainActivity</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_account_setting">Account Settings</string>
+    <string name="menu_open_map">Open Map</string>
+
 
 </resources>
